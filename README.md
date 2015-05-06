@@ -6,7 +6,7 @@ Using the App Module
 ====================
 This Sample Code is provided 'as is' for the purposes of demonstrating how to consume Sabre Dev Studio REST API from a php Web application. This requires to have an existing Sabre Dev Studio Key.
 
-The bridge provides service to any software application for example (Escape App) which is connected to Sabre API. It provides communication between application running on the user end point and Sabre API. The major responsibility of the bridge is authorization to which is stored in db/main.db file. That file includes also token which is responsible for keeping authorized session. The token is only updated when is invalid. The middleware is also a cache layer. It stores airports code in db/airpots.db
+The bridge provides service to any software application for example ([Escape App](https://github.com/SabreDevStudio) which is connected to Sabre API. It provides communication between application running on the user end point and Sabre API. The major responsibility of the bridge is authorization to which is stored in db/main.db file. That file includes also token which is responsible for keeping authorized session. The token is only updated when is invalid. The middleware is also a cache layer. It stores airports code in db/airpots.db
 Several functions in the bridge:
 function get($uri) - it is responsible for validating URL and update main.db if token expired or is invalid.
 * function updateToken($secret, $db) - this is for updating the token.
