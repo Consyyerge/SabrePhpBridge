@@ -9,10 +9,11 @@ This Sample Code is provided 'as is' for the purposes of demonstrating how to co
 The bridge provides service to any software application for example (Escape App) which is connected to Sabre API. It provides communication between application running on the user end point and Sabre API. The major responsibility of the bridge is authorization to which is stored in db/main.db file. That file includes also token which is responsible for keeping authorized session. The token is only updated when is invalid. The middleware is also a cache layer. It stores airports code in db/airpots.db
 Several functions in the bridge:
 function get($uri) - it is responsible for validating URL and update main.db if token expired or is invalid.
-function updateToken($secret, $db) - this is for updating the token
-function getToken($secret) - core of getting appropriate token to further purposes and requests function translate($airportCode) - return airport based on given longitude and latitude
-function airports($code) - it reads airport code from db file
-function formDestinationFinderResponse($input) - it decodes give json and create appropriate objects including id, coordination, city, currency code, destination rank and theme, than returns data in JSON format.
+* function updateToken($secret, $db) - this is for updating the token.
+* function getToken($secret) - core of getting appropriate token to further purposes and requests 
+* function translate($airportCode) - return airport based on given longitude and latitude
+* function airports($code) - it reads airport code from db file
+* function formDestinationFinderResponse($input) - it decodes give json and create appropriate objects including id, coordination, city, currency code, destination rank and theme, than returns data in JSON format.
 
 For more information on registering to get a Test Key account please visit Sabre Dev Studio@http://developer.sabre.com and how to authenticate and build your key visit https://developer.sabre.com/docs/read/rest_basics/authentication
 
