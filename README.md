@@ -1,4 +1,4 @@
-# SabrePhpBrigde
+SabrePhpBrigde
 ================
 This is a sample php Sabre REST API bridge that shows how to authenticate and consume Sabre Dev Studio REST APIs.
 
